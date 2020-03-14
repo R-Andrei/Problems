@@ -5,9 +5,10 @@ from random import uniform as rand
 
 def calculate_pi(magnitude=5):
     inside_area = 0
-    for _ in range(10**magnitude):
+    magnitude = 10**magnitude
+    for _ in range(magnitude):
         inside_area += 1 if rand(0, 1)**2 + rand(0, 1)**2 <= 1 else 0
-    return 4 * inside_area / 10 ** magnitude
+    return 4 * inside_area / magnitude
 
-pi =calculate_pi(magnitude=7)
+pi = calculate_pi(magnitude=7)
 print(pi)
